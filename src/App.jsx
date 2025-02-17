@@ -9,27 +9,37 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '95vh',
-    backgroundColor: '#f0f0f0',
-    fontFamily: 'Arial, sans-serif',
+    backgroundColor: '#f9fafb',
+    fontFamily: "'Roboto', sans-serif",
+    padding: '10px',
+    overflow: 'hidden',
   },
   button: {
-    padding: '10px 20px',
-    fontSize: '16px',
+    padding: '15px 30px',
+    fontSize: '18px',
     cursor: 'pointer',
     backgroundColor: '#4CAF50',
     color: 'white',
     border: 'none',
     borderRadius: '8px',
     marginBottom: '20px',
-    transition: 'background-color 0.3s ease',
+    boxShadow: '0 5px 15px rgba(0, 0, 0, 0.1)',
+    transition: 'all 0.3s ease',
+    width: '100%',
+    maxWidth: '250px',
+    outline: 'none',
   },
   buttonHover: {
     backgroundColor: '#45a049',
   },
   imagem: {
     maxHeight: '300px',
+    width: 'auto',
+    maxWidth: '100%',
+    objectFit: 'contain', // Alterado para 'contain' para preservar as proporções
     borderRadius: '10px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 4px 10px rgba(0, 0, 0, 0.15)',
+    marginTop: '20px',
   },
   confettiWrapper: {
     position: 'absolute',
@@ -40,6 +50,16 @@ const styles = {
     zIndex: 10,
     opacity: 1,
     transition: 'opacity 1s ease-out',
+  },
+  '@media (max-width: 600px)': {
+    button: {
+      padding: '12px 20px',
+      fontSize: '16px',
+      maxWidth: '200px',
+    },
+    imagem: {
+      maxHeight: '250px',
+    },
   },
 };
 
